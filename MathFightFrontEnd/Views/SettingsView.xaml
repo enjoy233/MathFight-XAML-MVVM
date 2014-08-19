@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="MathFightFrontEnd.Views.SettingsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="680.228" d:DesignWidth="1265.399">
+    <StackPanel Width="500" Margin="0 20 0 0">
+        <TextBlock TextAlignment="Center" FontFamily="Century Gothic" FontSize="30"
+                   Text="New Username"
+                   Grid.Row="0"
+                   Grid.Column="0"
+                   HorizontalAlignment="Left"/>
+        <TextBox Text="{Binding NewUsername}" TextAlignment="Left" FontFamily="Century Gothic" FontSize="30" Margin="0 0 0 20"/>
+        <Button
+            Command="{Binding ChangeUsername}"
+            Margin="0 0 0 50"
+            Padding="10"
+            FontSize="20"
+            FontFamily="Century Gothic"
+            Foreground="White"
+            Width="500"
+            HorizontalAlignment="Center" Background="#FF67869C" Content="Change Username"/>
+        <TextBlock TextAlignment="Center" FontFamily="Century Gothic" FontSize="30"
+                   Text="New Password"
+                   Grid.Row="0"
+                   Grid.Column="0"
+                   HorizontalAlignment="Left"/>
+        <PasswordBox Name="BoxPassword" FontFamily="Century Gothic" FontSize="30" Margin="0 0 0 20"/>
+        <Button
+            Command="{Binding ChangePassword}"
+            CommandParameter="{Binding ElementName=BoxPassword}"
+            Margin="0 0 0 50"
+            Padding="10"
+            FontSize="20"
+            FontFamily="Century Gothic"
+            Foreground="White"
+            Width="500"
+            HorizontalAlignment="Center" Background="#FF67869C" Content="Change Password"/>
+    </StackPanel>
+</UserControl>

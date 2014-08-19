@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="MathFightFrontEnd.Views.HighscoreView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:viewModels="clr-namespace:MathFightFrontEnd.ViewModels"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <StackPanel>
+        <StackPanel
+            Margin="0 20 0 0">
+            <ListView ItemsSource="{Binding Highscores}">
+                <ListView.View>
+
+                    <GridView AllowsColumnReorder="False">
+
+                        <GridViewColumn DisplayMemberBinding=
+                                        "{Binding Username}"
+                                        Header="Player name" Width="100"/>
+                        <!--<GridViewColumn DisplayMemberBinding=
+                        "{Binding Path=playerName}" 
+                        Header="Difficulty" Width="100"/>-->
+                        <GridViewColumn DisplayMemberBinding=
+                                        "{Binding Rating}" 
+                                        Header="Score"/>
+
+                    </GridView>
+
+                </ListView.View>
+            </ListView>
+        </StackPanel>
+    </StackPanel>
+</UserControl>

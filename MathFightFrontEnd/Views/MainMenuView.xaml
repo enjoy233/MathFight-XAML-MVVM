@@ -1,0 +1,78 @@
+﻿<UserControl x:Class="MathFightFrontEnd.Views.MainMenuView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:viewModels="clr-namespace:MathFightFrontEnd.ViewModels"
+             mc:Ignorable="d" 
+             d:DesignHeight="453.731" d:DesignWidth="591.045">
+    <StackPanel>
+        <StackPanel
+            Margin="0 20 0 0">
+            <Button
+                Command="{Binding RelativeSource={RelativeSource FindAncestor, 
+                AncestorType={x:Type Window}}, Path=DataContext.ChangeViewModel}"
+                CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, 
+                AncestorType={x:Type Window}}, Path=DataContext.ChooseDifficultyVM}"
+                Margin="5"
+                Padding="10"
+                FontSize="20"
+                FontFamily="Century Gothic"
+                Foreground="White"
+                Width="500"
+                HorizontalAlignment="Center">
+                <Button.Background>
+                    <SolidColorBrush Color="#FF67869C"/>
+                </Button.Background> Single Player
+            </Button>
+            <Button 
+                Command="{Binding RelativeSource={RelativeSource FindAncestor, 
+                AncestorType={x:Type Window}}, Path=DataContext.ChangeViewModel}"
+                CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, 
+                AncestorType={x:Type Window}}, Path=DataContext.MultiplayerGameVM}"
+                Margin="5"
+                Padding="10"
+                FontSize="20"
+                FontFamily="Century Gothic"
+                Foreground="White"
+                Width="500"
+                HorizontalAlignment="Center">
+                <Button.Background>
+                    <SolidColorBrush Color="#FF67869C"/>
+                </Button.Background> Multiplayer
+            </Button>
+            <Button
+                Command="{Binding RelativeSource={RelativeSource FindAncestor, 
+                AncestorType={x:Type Window}}, Path=DataContext.ChangeViewModel}"
+                CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, 
+                AncestorType={x:Type Window}}, Path=DataContext.SettingsVM}"
+                Margin="5"
+                Padding="10"
+                FontSize="20"
+                FontFamily="Century Gothic"
+                Foreground="White"
+                Width="500"
+                HorizontalAlignment="Center">
+                <Button.Background>
+                    <SolidColorBrush Color="#FF67869C"/>
+                </Button.Background> Options
+            </Button>
+            <Button
+                Command="{Binding RelativeSource={RelativeSource FindAncestor, 
+                AncestorType={x:Type Window}}, Path=DataContext.ChangeViewModel}"
+                CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, 
+                AncestorType={x:Type Window}}, Path=DataContext.HighscoreVM}"
+                Margin="5"
+                Padding="10"
+                FontSize="20"
+                FontFamily="Century Gothic"
+                Foreground="White"
+                Width="500"
+                HorizontalAlignment="Center">
+                <Button.Background>
+                    <SolidColorBrush Color="#FF67869C"/>
+                </Button.Background> High score
+            </Button>
+        </StackPanel>
+    </StackPanel>
+</UserControl>
